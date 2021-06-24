@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +25,7 @@ body {
 }
 
 #navbar h1 {
+  font-family: 'Days One', sans-serif;
   width: 80%;
   -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -154,7 +156,10 @@ body {
 
 @media only screen and (max-width: 425px) {
   #navbar h1 {
-    font-size: 30px;
+    font-size: 25px;
+  }
+  .toggle-div {
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
