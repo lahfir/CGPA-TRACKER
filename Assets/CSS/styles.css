@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: -apple-system, sans-serif;
+  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 body {
@@ -37,28 +39,26 @@ body {
           align-items: center;
   background: #dddddd;
   border-radius: 20px;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 40px;
   color: #2f2f2f;
 }
 
 .toggle-div {
-  padding-top: 30px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 600;
 }
 
 .toggle-div .toggle-left {
   height: 50px;
   width: 250px;
-  text-align: center;
   color: white;
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 12px 0px 0px 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,16 +68,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(97.38deg, #de3e5f -0.86%, #ff7491 101.03%);
+  background: #d2d2d2;
   cursor: pointer;
+  font-size: 22px;
 }
 
 .toggle-div .toggle-right {
   height: 50px;
   width: 250px;
-  text-align: center;
   color: white;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0px 12px 12px 0px;
   background: #d2d2d2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,6 +90,12 @@ body {
           align-items: center;
   margin-left: 10px;
   cursor: pointer;
+  font-size: 22px;
+}
+
+.selected-toggle {
+  background: linear-gradient(97.38deg, #de3e5f -0.86%, #ff7491 101.03%) !important;
+  font-weight: bold !important;
 }
 
 @media only screen and (max-width: 768px) {
