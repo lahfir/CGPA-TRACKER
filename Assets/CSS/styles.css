@@ -123,8 +123,8 @@ body {
 
 .gpa-content {
   padding: 20px;
-  -webkit-animation: bounceIn 1s;
-          animation: bounceIn 1s;
+  -webkit-animation: bounceIn 0.7s;
+          animation: bounceIn 0.7s;
   width: 80%;
   height: calc(60vh);
   border: 1px solid #9A9A9A;
