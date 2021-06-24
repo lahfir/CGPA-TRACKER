@@ -10,21 +10,28 @@ $font-color:#2F2F2F;
 body {
     background: $base-color;
     padding: 15px;
-    display: flex;
-    justify-content: center;
 }
 
 #navbar {
     height: 70px;
-    width: 80%;
-    background: #DDDDDD;
-    border-radius: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
-    font-size: 40px;
-    color: $font-color;
+
+    h1 {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #DDDDDD;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 40px;
+        color: $font-color;
+    }
+
 }
 
 @media only screen and (max-width: 1024px) {}
@@ -32,7 +39,7 @@ body {
 @media only screen and (max-width: 768px) {}
 
 @media only screen and (max-width: 425px) {
-    #navbar {
+    #navbar h1 {
         font-size: 30px;
     }
 }

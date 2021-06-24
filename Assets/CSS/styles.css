@@ -7,19 +7,11 @@
 body {
   background: #f1f1f1;
   padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #navbar {
   height: 70px;
-  width: 80%;
-  background: #DDDDDD;
-  border-radius: 20px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,13 +21,29 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#navbar h1 {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #DDDDDD;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 40px;
   color: #2F2F2F;
 }
 
 @media only screen and (max-width: 425px) {
-  #navbar {
+  #navbar h1 {
     font-size: 30px;
   }
 }
