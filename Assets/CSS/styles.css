@@ -35,14 +35,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #DDDDDD;
+  background: #dddddd;
   border-radius: 20px;
   font-weight: 600;
   font-size: 40px;
-  color: #2F2F2F;
+  color: #2f2f2f;
 }
 
-.topbar {
+.toggle-div {
   padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,9 +53,9 @@ body {
   font-weight: 600;
 }
 
-.topbar .left {
+.toggle-div .toggle-left {
   height: 50px;
-  width: 15%;
+  width: 250px;
   text-align: center;
   color: white;
   border-radius: 15px 0px 0px 15px;
@@ -68,16 +68,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(97.38deg, #DE3E5F -0.86%, #FF7491 101.03%);
+  background: linear-gradient(97.38deg, #de3e5f -0.86%, #ff7491 101.03%);
+  cursor: pointer;
 }
 
-.topbar .right {
+.toggle-div .toggle-right {
   height: 50px;
-  width: 15%;
+  width: 250px;
   text-align: center;
   color: white;
   border-radius: 0px 15px 15px 0px;
-  background: #D2D2D2;
+  background: #d2d2d2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,6 +89,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle-div .toggle-left,
+  .toggle-div .toggle-right {
+    width: 150px;
+  }
 }
 
 @media only screen and (max-width: 425px) {
