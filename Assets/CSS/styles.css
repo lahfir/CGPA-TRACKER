@@ -37,7 +37,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #dddddd;
   border-radius: 20px;
   font-weight: bolder;
   font-size: 40px;
@@ -70,7 +69,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #d2d2d2;
+  background: #bfbfbf;
   cursor: pointer;
   font-size: 22px;
 }
@@ -82,7 +81,7 @@ body {
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: white;
   border-radius: 0px 12px 12px 0px;
-  background: #d2d2d2;
+  background: #bfbfbf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,8 +124,8 @@ body {
 
 .gpa-content {
   padding: 20px;
-  -webkit-animation: jello 0.7s;
-          animation: jello 0.7s;
+  -webkit-animation: zoomIn 0.7s;
+          animation: zoomIn 0.7s;
   width: 80%;
   height: calc(60vh);
   border: 1px solid #9A9A9A;
