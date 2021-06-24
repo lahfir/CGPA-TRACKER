@@ -7,7 +7,7 @@
 
 body {
   padding: 15px;
-  background: #f1f1f1;
+  background: url("https://starvalleyrealestate.com/wp-content/uploads/sites/9/2015/05/bg-paper-texture.jpg") no-repeat fixed center;
 }
 
 #navbar {
@@ -33,6 +33,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -133,6 +134,7 @@ body {
   border: 1px solid #9A9A9A;
   background: -webkit-gradient(linear, left top, left bottom, from(#FDFBFB), to(#EBEDEE));
   background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
+  background-size: cover;
   border-radius: 22px;
   display: -webkit-box;
   display: -ms-flexbox;

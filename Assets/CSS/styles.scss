@@ -13,7 +13,8 @@ $toggle-bg: #bfbfbf;
 
 body {
     padding: 15px;
-    background: $base-color;
+    // background: $base-color;
+    background: url("https://starvalleyrealestate.com/wp-content/uploads/sites/9/2015/05/bg-paper-texture.jpg") no-repeat fixed center;
 }
 
 #navbar {
@@ -29,6 +30,7 @@ body {
         transition: $transition;
         height: 100%;
         display: flex;
+        text-align: center;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
@@ -106,6 +108,7 @@ body {
     height: calc(60vh);
     border: 1px solid #9A9A9A;
     background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
+    background-size: cover;
     border-radius: 22px;
     display: flex;
     flex-direction: row;
