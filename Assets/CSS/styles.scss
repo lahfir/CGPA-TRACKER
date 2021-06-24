@@ -1,11 +1,38 @@
 $base-color: #f1f1f1;
-
+$font-color:#2F2F2F;
 
 * {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, sans-serif;
 }
 
 body {
     background: $base-color;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    height: 70px;
+    width: 80%;
+    background: #DDDDDD;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 40px;
+    color: $font-color;
+}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 425px) {
+    #navbar {
+        font-size: 30px;
+    }
 }
