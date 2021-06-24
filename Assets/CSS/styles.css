@@ -52,13 +52,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .toggle-div .toggle-left {
   height: 50px;
   width: 250px;
+  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: white;
   border-radius: 12px 0px 0px 12px;
   display: -webkit-box;
@@ -78,6 +78,8 @@ body {
 .toggle-div .toggle-right {
   height: 50px;
   width: 250px;
+  -webkit-transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: white;
   border-radius: 0px 12px 12px 0px;
   background: #d2d2d2;
@@ -123,8 +125,8 @@ body {
 
 .gpa-content {
   padding: 20px;
-  -webkit-animation: bounceIn 0.7s;
-          animation: bounceIn 0.7s;
+  -webkit-animation: jello 0.7s;
+          animation: jello 0.7s;
   width: 80%;
   height: calc(60vh);
   border: 1px solid #9A9A9A;

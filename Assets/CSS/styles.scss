@@ -1,6 +1,7 @@
 $base-color: #f1f1f1;
 $primary-font-color: #2f2f2f;
 $secondary-font-color: white;
+$transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 * {
     margin: 0;
@@ -22,7 +23,7 @@ body {
 
     h1 {
         width: 80%;
-        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: $transition;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -39,11 +40,11 @@ body {
     margin-top: 60px;
     display: flex;
     justify-content: center;
-    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     .toggle-left {
         height: 50px;
         width: 250px;
+        transition: $transition;
         color: $secondary-font-color;
         border-radius: 12px 0px 0px 12px;
         display: flex;
@@ -57,6 +58,7 @@ body {
     .toggle-right {
         height: 50px;
         width: 250px;
+        transition: $transition;
         color: $secondary-font-color;
         border-radius: 0px 12px 12px 0px;
         background: #d2d2d2;
@@ -97,7 +99,7 @@ body {
 
 .gpa-content {
     padding: 20px;
-    animation: bounceIn 0.7s;
+    animation: jello 0.7s;
     width: 80%;
     height: calc(60vh);
     border: 1px solid #9A9A9A;
