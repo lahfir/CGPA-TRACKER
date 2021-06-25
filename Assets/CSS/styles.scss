@@ -158,6 +158,7 @@ body {
                         margin: 5px 0;
 
                         td {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.137);
                             padding: 10px 0;
                             font-size: 20px;
 
@@ -179,6 +180,10 @@ body {
                                 border: 2px solid #ff7491;
                             }
                         }
+                    }
+
+                    tr:hover {
+                        background: #e8e8e8;
                     }
                 }
             }

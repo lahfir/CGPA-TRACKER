@@ -195,6 +195,7 @@ body {
 }
 
 .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.137);
   padding: 10px 0;
   font-size: 20px;
 }
@@ -216,6 +217,10 @@ body {
 
 .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select:hover {
   border: 2px solid #ff7491;
+}
+
+.gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr:hover {
+  background: #e8e8e8;
 }
 
 .gpa-content .gpa-output .grade-display-container {
