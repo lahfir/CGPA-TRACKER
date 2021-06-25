@@ -31,31 +31,158 @@
   <body>
     <nav id="navbar"><h1>CGPA TRACKER</h1></nav>
     <div class="toggle-div">
-      <div data-micron="blink" class="toggle-left selected-toggle" id="gpa-toggle">GPA</div>
+      <div
+        data-micron="blink"
+        class="toggle-left selected-toggle"
+        id="gpa-toggle"
+      >
+        GPA
+      </div>
       <div data-micron="blink" class="toggle-right" id="cgpa-toggle">CGPA</div>
     </div>
     <div class="gpa-content">
-      <div class="gpa-input">
-
-      </div>
+      <div class="gpa-input"></div>
       <div class="gpa-output">
-
+        <h1>Enter Grades</h1>
+        <div class="gpa-output-grade-input-table">
+          <table id="table">
+            <tr>
+              <th width="500px">Subject</th>
+              <th width="100px">Credit</th>
+              <th width="100px">Grade</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Discrete mathematics and Automata theory</td>
+                <td>3</td>
+                <td>
+                  <select name="grade-select-dd" id="grade-select-dd">
+                    <option value="10">10 O</option>
+                    <option value="9">9 A+</option>
+                    <option value="8">8 A</option>
+                    <option value="7">7 B+</option>
+                    <option value="6">6 B</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grade-display-container">
+          <div class="total">
+            <h1>Total</h1>
+            <h1 id="total-gpa">8.5<span>GPA</span></h1>
+          </div>
+        </div>
       </div>
     </div>
     <script src="Assets/JS/main.js" type="text/javascript"></script>
-    <script> src="https://code.jquery.com/jquery-3.6.0.js" </script>
+    <script>
+      src = "https://code.jquery.com/jquery-3.6.0.js";
+    </script>
     <script type="text/javascript">
-      $(document).ready(function(){
-        $('#department').click(function(){
-          $('#dept-list').toggleClass('active')
-        })
-      })
+      $(document).ready(function () {
+        $("#department").click(function () {
+          $("#dept-list").toggleClass("active");
+        });
+      });
 
-      $(document).ready(function(){
-        $('#semester').click(function(){
-          $('#sem-list').toggleClass('active')
-        })
-      })
+      $(document).ready(function () {
+        $("#semester").click(function () {
+          $("#sem-list").toggleClass("active");
+        });
+      });
     </script>
   </body>
 </html>

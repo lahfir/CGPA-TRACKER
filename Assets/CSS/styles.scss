@@ -1,5 +1,5 @@
 $base-color: #f1f1f1;
-$primary-font-color: #2f2f2f;
+$primary-font-color: #1f1f1f;
 $secondary-font-color: white;
 $transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 $toggle-bg: #bfbfbf;
@@ -7,6 +7,7 @@ $toggle-bg: #bfbfbf;
 
 * {
     margin: 0;
+    transition: $transition;
     padding: 0;
     font-family: -apple-system, sans-serif;
 }
@@ -81,7 +82,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 
 /* Track */
@@ -101,7 +102,7 @@ body {
 }
 
 .gpa-content {
-    padding: 20px;
+    padding: 30px;
     animation: zoomIn 0.7s;
     width: 80%;
     height: calc(60vh);
@@ -110,16 +111,110 @@ body {
     background-size: cover;
     border-radius: 22px;
     display: flex;
-    flex-direction: row;
     margin: auto;
+    transition: $transition;
     margin-top: 30px;
     box-shadow: 0px 11px 31px 5px #0000001A;
+    color: $primary-font-color;
 
     .gpa-input {
+        padding: 0 10px;
         color: $primary-font-color;
         margin-right: 20px;
         border-right: 1px solid black;
         font-size: 22px;
+    }
+
+    .gpa-output {
+        padding: 0 10px;
+        padding-left: 10px;
+        width: 100%;
+        height: 100%;
+
+        .gpa-output-grade-input-table {
+            width: 100%;
+            height: 75%;
+            margin-top: 15px;
+            overflow-y: scroll;
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                height: 100%;
+                text-align: left;
+                word-wrap: break-word;
+
+                tr {
+                    position: sticky;
+
+                    th {
+                        margin: 0 6px;
+                        font-size: 25px;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        margin: 5px 0;
+
+                        td {
+                            padding: 10px 0;
+                            font-size: 20px;
+
+                            select {
+                                padding: 5px;
+                                border-radius: 5px;
+                                font-size: 18px;
+                                cursor: pointer;
+                                font-weight: bold;
+                                border: 2px solid #8a8a8a;
+                                transition: $transition;
+
+                                option {
+                                    cursor: pointer;
+                                }
+                            }
+
+                            select:hover {
+                                border: 2px solid #ff7491;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .grade-display-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 15px;
+
+            .total {
+                display: flex;
+                align-items: center;
+
+                h1 {
+                    font-size: 22px;
+                }
+
+                #total-gpa {
+                    background: linear-gradient(180deg, #DE3E5F 0%, #FF7491 100%);
+                    border-radius: 7px;
+                    padding: 8px;
+                    margin-left: 10px;
+                    color: $secondary-font-color;
+
+                    span {
+                        padding-left: 5px;
+                        font-weight: 100;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -145,7 +240,43 @@ body {
         font-size: 25px;
     }
 
-    .toggle-div {
-        margin-top: 30px;
+    .gpa-content {
+        flex-direction: column;
+
+        .gpa-input {
+            border-right: 0;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .gpa-output {
+            h1 {
+                font-size: 25px;
+            }
+
+            .gpa-output-grade-input-table {
+                table {
+                    tr {
+                        th {
+                            font-size: 20px;
+                        }
+                    }
+
+                    tbody {
+                        tr {
+
+                            td {
+                                font-size: 16px;
+
+                                select {
+                                    padding: 0;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
