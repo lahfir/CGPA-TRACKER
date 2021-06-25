@@ -34,7 +34,28 @@
       <div data-micron="blink" class="toggle-left selected-toggle" id="gpa-toggle">GPA</div>
       <div data-micron="blink" class="toggle-right" id="cgpa-toggle">CGPA</div>
     </div>
-    <div class="gpa-content"></div>
+    <div class="gpa-content">
+      <div class="gpa-input">
+
+      </div>
+      <div class="gpa-output">
+
+      </div>
+    </div>
     <script src="Assets/JS/main.js" type="text/javascript"></script>
+    <script> src="https://code.jquery.com/jquery-3.6.0.js" </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#department').click(function(){
+          $('#dept-list').toggleClass('active')
+        })
+      })
+
+      $(document).ready(function(){
+        $('#semester').click(function(){
+          $('#sem-list').toggleClass('active')
+        })
+      })
+    </script>
   </body>
 </html>

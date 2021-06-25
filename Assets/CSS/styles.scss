@@ -37,7 +37,7 @@ body {
 }
 
 .toggle-div {
-    margin-top: 60px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 
@@ -110,59 +110,24 @@ body {
     margin: auto;
     margin-top: 30px;
     box-shadow: 0px 11px 31px 5px #0000001A;
+    .gpa-input{
+        padding: 10px 0 0 20px;
+        color: $primary-font-color;
+        font-size: 22px;
+        }
 }
 
 
 
-// #circle{
-//     width: 150px;
-//     height: 150px;
-//     border-radius: 50%;
-//     background: linear-gradient(180deg, #DE3E5F 0%, #FF7491 100%);
-//     z-index: -1;
-//     position: absolute;
-//     right: 175px;
-//     top: 125px;
-//     box-shadow: 15px -15px 73px -24px #00000040 inset;
-//     box-shadow: -14px 15px 50px 0px #00000040;
-// }
 
-// .boy-image{
-//     position: absolute;
-//     z-index: 1;
-//     left: 120px;
-//     top: 46.5%;
-//     height: 350px;
-//     width: 250px;
-// }
 
-@media only screen and (max-width: 1250px) {
-    // #circle{
-    //     width: 120px;
-    //     height: 120px;
-    //     right: 170px;
-    //     top: 140px;
-    // }
-}
+@media only screen and (max-width: 1250px) {}
 
-@media only screen and (max-width: 1600px) {
-    // #circle{
-    //     width: 160px;
-    //     height: 160px;
-    //     right: 170px;
-    //     top: 120px;
-    // }
-}
+@media only screen and (max-width: 1600px) {}
 
 
 
-@media only screen and (max-width: 1150px) {
-    // #circle,
-    // .boy-image{
-    //     display: none;
-    // }
-
-}
+@media only screen and (max-width: 1150px) {}
 
 
 @media only screen and (max-width: 768px) {
