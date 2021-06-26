@@ -10,11 +10,11 @@ $("#cgpa-toggle").click(function () {
 
 $("#dept-select").click(function () {
   var newOptions = {
-    9: "values-9",
-    10: "values-10",
+    9: "s-9",
+    10: "s-10",
   };
 
-  if ($("#dept-select").val() == 22) {
+  if ($("#dept-select").val() >= 25) {
     var $el = $("#sem-select");
     if ($("#sem-select> option").length < 10) {
       $.each(newOptions, function (key, value) {
