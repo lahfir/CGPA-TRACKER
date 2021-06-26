@@ -127,7 +127,7 @@ body {
   background: #555;
 }
 
-.gpa-content {
+.gpa-cgpa-container {
   padding: 30px;
   -webkit-animation: zoomIn 0.7s;
           animation: zoomIn 0.7s;
@@ -150,7 +150,14 @@ body {
   color: #1f1f1f;
 }
 
-.gpa-content .gpa-input {
+.gpa-cgpa-container .gpa-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1f1f1f;
+}
+
+.gpa-cgpa-container .gpa-content .gpa-input {
   padding-left: 10px;
   padding-right: 20px;
   color: #1f1f1f;
@@ -159,14 +166,14 @@ body {
   width: 50%;
 }
 
-.gpa-content .gpa-input .select-box {
+.gpa-cgpa-container .gpa-content .gpa-input .select-box {
   min-height: 190px;
   overflow: auto;
   position: absolute;
   display: contents;
 }
 
-.gpa-content .gpa-input .select-box select {
+.gpa-cgpa-container .gpa-content .gpa-input .select-box select {
   cursor: pointer;
   height: 42px;
   border: 1px solid black;
@@ -179,30 +186,30 @@ body {
   font-weight: 400;
 }
 
-.gpa-content .gpa-input .select-box select:hover {
+.gpa-cgpa-container .gpa-content .gpa-input .select-box select:hover {
   border: 2px solid #ff7491;
 }
 
-.gpa-content .gpa-input .select-box:after {
+.gpa-cgpa-container .gpa-content .gpa-input .select-box:after {
   content: "";
   position: absolute;
 }
 
-.gpa-content .gpa-output {
+.gpa-cgpa-container .gpa-content .gpa-output {
   padding: 0 10px;
   padding-left: 20px;
   width: 100%;
   height: 100%;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table {
   width: 100%;
   height: 500px;
   margin-top: 15px;
   overflow-y: scroll;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table {
   border-collapse: collapse;
   width: 100%;
   height: 100%;
@@ -210,27 +217,27 @@ body {
   word-wrap: break-word;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tr {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tr {
   position: -webkit-sticky;
   position: sticky;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tr th {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tr th {
   margin: 0 6px;
   font-size: 25px;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr {
   margin: 5px 0;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.137);
   padding: 10px 0;
   font-size: 20px;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select {
   padding: 5px;
   border-radius: 5px;
   font-size: 18px;
@@ -241,19 +248,19 @@ body {
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select option {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select option {
   cursor: pointer;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select:hover {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select:hover {
   border: 2px solid #ff7491;
 }
 
-.gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr:hover {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr:hover {
   background: #e8e8e8;
 }
 
-.gpa-content .gpa-output .grade-display-container {
+.gpa-cgpa-container .gpa-content .gpa-output .grade-display-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -267,7 +274,7 @@ body {
   margin-top: 15px;
 }
 
-.gpa-content .gpa-output .grade-display-container .total {
+.gpa-cgpa-container .gpa-content .gpa-output .grade-display-container .total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,11 +283,11 @@ body {
           align-items: center;
 }
 
-.gpa-content .gpa-output .grade-display-container .total h1 {
+.gpa-cgpa-container .gpa-content .gpa-output .grade-display-container .total h1 {
   font-size: 22px;
 }
 
-.gpa-content .gpa-output .grade-display-container .total #total-gpa {
+.gpa-cgpa-container .gpa-content .gpa-output .grade-display-container .total #total-gpa {
   background: -webkit-gradient(linear, left top, left bottom, from(#DE3E5F), to(#FF7491));
   background: linear-gradient(180deg, #DE3E5F 0%, #FF7491 100%);
   border-radius: 7px;
@@ -289,7 +296,7 @@ body {
   color: white;
 }
 
-.gpa-content .gpa-output .grade-display-container .total #total-gpa span {
+.gpa-cgpa-container .gpa-content .gpa-output .grade-display-container .total #total-gpa span {
   padding-left: 5px;
   font-weight: 100;
   font-size: 20px;
@@ -300,36 +307,38 @@ body {
   .toggle-div .toggle-right {
     width: 150px;
   }
-  .gpa-content {
+  .gpa-cgpa-container .gpa-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .gpa-content .gpa-input {
+  .gpa-cgpa-container .gpa-content .gpa-input {
     border-right: 0;
-    padding-bottom: 15px;
+    padding: 0 0 15px 0;
     border-bottom: 1px solid #8f8f8f;
     margin: 0px;
     width: 100%;
   }
-  .gpa-content .gpa-output {
-    padding-top: 15px;
+  .gpa-cgpa-container .gpa-content .gpa-output {
+    padding: 10px 0 0 0;
   }
-  .gpa-content .gpa-output h1 {
+  .gpa-cgpa-container .gpa-content .gpa-output h1 {
     font-size: 25px;
   }
-  .gpa-content .gpa-output .gpa-output-grade-input-table {
-    height: 50%;
-  }
-  .gpa-content .gpa-output .gpa-output-grade-input-table table tr th {
+  .gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tr th {
     font-size: 20px;
   }
-  .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td {
+  .gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td {
     font-size: 16px;
   }
-  .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select {
+  .gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select {
     padding: 0;
+  }
+  .gpa-cgpa-container .gpa-content .gpa-output .grade-display-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

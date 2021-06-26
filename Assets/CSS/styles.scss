@@ -103,7 +103,7 @@ body {
     background: #555;
 }
 
-.gpa-content {
+.gpa-cgpa-container {
     padding: 30px;
     animation: zoomIn 0.7s;
     width: 80%;
@@ -119,142 +119,150 @@ body {
     box-shadow: 0px 11px 31px 5px #0000001A;
     color: $primary-font-color;
 
-    .gpa-input {
-        padding-left: 10px;
-        padding-right: 20px;
+    .gpa-content {
+        display: flex;
         color: $primary-font-color;
-        border-right: 1px solid rgb(143, 143, 143);
-        font-size: 22px;
-        width: 50%;
 
-        .select-box {
-            min-height: 190px;
-            overflow: auto;
-            position: absolute;
-            display: contents;
+        .gpa-input {
+            padding-left: 10px;
+            padding-right: 20px;
+            color: $primary-font-color;
+            border-right: 1px solid rgb(143, 143, 143);
+            font-size: 22px;
+            width: 50%;
 
-            select {
-                cursor: pointer;
-                height: 42px;
-                border: 1px solid black;
-                margin: 7px 0;
-                padding: 10px 15px;
-                line-height: 22px;
-                font-size: 16px;
-                width: 100%;
-                border-radius: 8px;
-                font-weight: 400;
-            }
+            .select-box {
+                min-height: 190px;
+                overflow: auto;
+                position: absolute;
+                display: contents;
 
-            select:hover {
-                border: 2px solid #ff7491;
-            }
-        }
-
-
-        .select-box:after {
-            content: "";
-            position: absolute;
-        }
-    }
-
-    .gpa-output {
-        padding: 0 10px;
-        padding-left: 20px;
-        width: 100%;
-        height: 100%;
-
-        .gpa-output-grade-input-table {
-            width: 100%;
-            height: 500px;
-            margin-top: 15px;
-            overflow-y: scroll;
-
-            table {
-                border-collapse: collapse;
-                width: 100%;
-                height: 100%;
-                text-align: left;
-                word-wrap: break-word;
-
-                tr {
-                    position: sticky;
-
-                    th {
-                        margin: 0 6px;
-                        font-size: 25px;
-                    }
+                select {
+                    cursor: pointer;
+                    height: 42px;
+                    border: 1px solid black;
+                    margin: 7px 0;
+                    padding: 10px 15px;
+                    line-height: 22px;
+                    font-size: 16px;
+                    width: 100%;
+                    border-radius: 8px;
+                    font-weight: 400;
                 }
 
-                tbody {
+                select:hover {
+                    border: 2px solid #ff7491;
+                }
+            }
+
+
+            .select-box:after {
+                content: "";
+                position: absolute;
+            }
+        }
+
+        .gpa-output {
+            padding: 0 10px;
+            padding-left: 20px;
+            width: 100%;
+            height: 100%;
+
+            .gpa-output-grade-input-table {
+                width: 100%;
+                height: 500px;
+                margin-top: 15px;
+                overflow-y: scroll;
+
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    height: 100%;
+                    text-align: left;
+                    word-wrap: break-word;
+
                     tr {
-                        margin: 5px 0;
+                        position: sticky;
 
-                        td {
-                            border-bottom: 1px solid rgba(0, 0, 0, 0.137);
-                            padding: 10px 0;
-                            font-size: 20px;
-
-                            select {
-                                padding: 5px;
-                                border-radius: 5px;
-                                font-size: 18px;
-                                cursor: pointer;
-                                font-weight: bold;
-                                border: 2px solid #8a8a8a;
-                                transition: $transition;
-
-                                option {
-                                    cursor: pointer;
-                                }
-                            }
-
-                            select:hover {
-                                border: 2px solid #ff7491;
-                            }
+                        th {
+                            margin: 0 6px;
+                            font-size: 25px;
                         }
                     }
 
-                    tr:hover {
-                        background: #e8e8e8;
+                    tbody {
+                        tr {
+                            margin: 5px 0;
+
+                            td {
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+                                padding: 10px 0;
+                                font-size: 20px;
+
+                                select {
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                    font-size: 18px;
+                                    cursor: pointer;
+                                    font-weight: bold;
+                                    border: 2px solid #8a8a8a;
+                                    transition: $transition;
+
+                                    option {
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                select:hover {
+                                    border: 2px solid #ff7491;
+                                }
+                            }
+                        }
+
+                        tr:hover {
+                            background: #e8e8e8;
+                        }
                     }
                 }
             }
-        }
 
-        .grade-display-container {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-top: 15px;
-
-            .total {
+            .grade-display-container {
+                width: 100%;
                 display: flex;
                 align-items: center;
+                justify-content: flex-end;
+                margin-top: 15px;
 
-                h1 {
-                    font-size: 22px;
-                }
+                .total {
+                    display: flex;
+                    align-items: center;
 
-                #total-gpa {
-                    background: linear-gradient(180deg, #DE3E5F 0%, #FF7491 100%);
-                    border-radius: 7px;
-                    padding: 8px;
-                    margin-left: 10px;
-                    color: $secondary-font-color;
+                    h1 {
+                        font-size: 22px;
+                    }
 
-                    span {
-                        padding-left: 5px;
-                        font-weight: 100;
-                        font-size: 20px;
+                    #total-gpa {
+                        background: linear-gradient(180deg, #DE3E5F 0%, #FF7491 100%);
+                        border-radius: 7px;
+                        padding: 8px;
+                        margin-left: 10px;
+                        color: $secondary-font-color;
+
+                        span {
+                            padding-left: 5px;
+                            font-weight: 100;
+                            font-size: 20px;
+                        }
                     }
                 }
             }
-        }
 
+        }
     }
+
+
 }
+
 
 @media only screen and (max-width: 1250px) {}
 
@@ -271,47 +279,52 @@ body {
         }
     }
 
-    .gpa-content {
-        flex-direction: column;
+    .gpa-cgpa-container {
+        .gpa-content {
+            flex-direction: column;
 
-        .gpa-input {
-            border-right: 0;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgb(143, 143, 143);
-            margin: 0px;
-            width: 100%;
-        }
-
-        .gpa-output {
-            padding-top: 15px;
-
-            h1 {
-                font-size: 25px;
+            .gpa-input {
+                border-right: 0;
+                padding: 0 0 15px 0;
+                border-bottom: 1px solid rgb(143, 143, 143);
+                margin: 0px;
+                width: 100%;
             }
 
-            .gpa-output-grade-input-table {
-                height: 50%;
+            .gpa-output {
+                padding: 10px 0 0 0;
 
-                table {
-                    tr {
-                        th {
-                            font-size: 20px;
-                        }
-                    }
+                h1 {
+                    font-size: 25px;
+                }
 
-                    tbody {
+                .gpa-output-grade-input-table {
+
+                    table {
                         tr {
+                            th {
+                                font-size: 20px;
+                            }
+                        }
 
-                            td {
-                                font-size: 16px;
+                        tbody {
+                            tr {
 
-                                select {
-                                    padding: 0;
+                                td {
+                                    font-size: 16px;
 
+                                    select {
+                                        padding: 0;
+
+                                    }
                                 }
                             }
                         }
                     }
+                }
+
+                .grade-display-container {
+                    justify-content: center;
                 }
             }
         }
