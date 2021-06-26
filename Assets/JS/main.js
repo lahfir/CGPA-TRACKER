@@ -7,3 +7,5 @@ $("#cgpa-toggle").click(function () {
   $("#cgpa-toggle").addClass("selected-toggle");
   $("#gpa-toggle").removeClass("selected-toggle");
 });
+
+

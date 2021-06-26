@@ -153,7 +153,32 @@ body {
   color: #2f2f2f;
   margin-right: 20px;
   border-right: 1px solid black;
+  padding-right: 20px;
   font-size: 22px;
+  width: 400px;
+}
+
+.gpa-content .gpa-input .select-box {
+  min-height: 190px;
+  overflow: auto;
+  position: absolute;
+  width: 250px;
+  display: contents;
+}
+
+.gpa-content .gpa-input .select-box select {
+  height: 42px;
+  padding: 10px 15px;
+  line-height: 22px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 400;
+}
+
+.gpa-content .gpa-input .select-box:after {
+  content: "";
+  position: absolute;
 }
 
 @media only screen and (max-width: 768px) {
