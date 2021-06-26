@@ -18,7 +18,7 @@ $("#dept-select").click(function () {
     10: "s-10",
   };
 
-  if ($("#dept-select").val() >= 25) {
+  if ($("#dept-select").val() >= 17) {
     var $el = $("#sem-select");
     if ($("#sem-select> option").length < 10) {
       $.each(newOptions, function (key, value) {
