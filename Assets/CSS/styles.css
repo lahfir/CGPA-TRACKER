@@ -151,6 +151,9 @@ body {
 }
 
 .gpa-cgpa-container .gpa-content {
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,6 +303,12 @@ body {
   padding-left: 5px;
   font-weight: 100;
   font-size: 20px;
+}
+
+.gpa-cgpa-container .cgpa-content {
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {

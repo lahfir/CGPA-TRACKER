@@ -1,15 +1,15 @@
 $("#gpa-toggle").click(function () {
   $("#gpa-toggle").addClass("selected-toggle");
   $("#cgpa-toggle").removeClass("selected-toggle");
-  $(".cgpa-content").fadeOut(400);
-  $(".gpa-content").fadeIn(400);
+  $(".cgpa-content").css("display", "none");
+  $(".gpa-content").css("display", "flex");
 });
 
 $("#cgpa-toggle").click(function () {
   $("#cgpa-toggle").addClass("selected-toggle");
   $("#gpa-toggle").removeClass("selected-toggle");
-  $(".cgpa-content").fadeIn(400);
-  $(".gpa-content").fadeOut(400);
+  $(".gpa-content").css("display", "none");
+  $(".cgpa-content").css("display", "flex");
 });
 
 $("#dept-select").click(function () {

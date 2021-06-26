@@ -120,6 +120,8 @@ body {
     color: $primary-font-color;
 
     .gpa-content {
+        animation: fadeIn 0.5s;
+        width: 100%;
         display: flex;
         color: $primary-font-color;
 
@@ -260,7 +262,10 @@ body {
         }
     }
 
-
+    .cgpa-content {
+        animation: fadeIn 0.5s;
+        display: none;
+    }
 }
 
 
