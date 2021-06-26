@@ -1,7 +1,7 @@
 $base-color: #f1f1f1;
 $primary-font-color: #1f1f1f;
 $secondary-font-color: white;
-$transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+$transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 $toggle-bg: #bfbfbf;
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 
@@ -107,7 +107,7 @@ body {
     padding: 30px;
     animation: zoomIn 0.7s;
     width: 80%;
-    height: calc(60vh);
+    height: auto;
     border: 1px solid #9A9A9A;
     background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
     background-size: cover;
@@ -120,49 +120,53 @@ body {
     color: $primary-font-color;
 
     .gpa-input {
-        padding: 0 10px;
-        color: $primary-font-color;
-        margin-right: 20px;
-        border-right: 1px solid black;
+        padding-left: 10px;
         padding-right: 20px;
+        color: $primary-font-color;
+        border-right: 1px solid rgb(143, 143, 143);
         font-size: 22px;
-        width: 400px;
+        width: 50%;
 
         .select-box {
             min-height: 190px;
             overflow: auto;
             position: absolute;
-            width: 250px;
             display: contents;
+
+            select {
+                cursor: pointer;
+                height: 42px;
+                border: 1px solid black;
+                margin: 7px 0;
+                padding: 10px 15px;
+                line-height: 22px;
+                font-size: 16px;
+                width: 100%;
+                border-radius: 8px;
+                font-weight: 400;
+            }
+
+            select:hover {
+                border: 2px solid #ff7491;
+            }
         }
 
-
-        .select-box select {
-            height: 42px;
-            padding: 10px 15px;
-            line-height: 22px;
-            font-size: 16px;
-            width: 100%;
-            border-radius: 8px;
-            font-weight: 400;
-        }
 
         .select-box:after {
             content: "";
             position: absolute;
         }
-
     }
 
     .gpa-output {
         padding: 0 10px;
-        padding-left: 10px;
+        padding-left: 20px;
         width: 100%;
         height: 100%;
 
         .gpa-output-grade-input-table {
             width: 100%;
-            height: 75%;
+            height: 500px;
             margin-top: 15px;
             overflow-y: scroll;
 
@@ -266,28 +270,28 @@ body {
             width: 150px;
         }
     }
-}
-
-@media only screen and (max-width: 425px) {
-    #navbar h1 {
-        font-size: 25px;
-    }
 
     .gpa-content {
         flex-direction: column;
 
         .gpa-input {
             border-right: 0;
-            border-bottom: 1px solid black;
-            margin-bottom: 10px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgb(143, 143, 143);
+            margin: 0px;
+            width: 100%;
         }
 
         .gpa-output {
+            padding-top: 15px;
+
             h1 {
                 font-size: 25px;
             }
 
             .gpa-output-grade-input-table {
+                height: 50%;
+
                 table {
                     tr {
                         th {
@@ -311,5 +315,11 @@ body {
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #navbar h1 {
+        font-size: 25px;
     }
 }
