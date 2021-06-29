@@ -133,8 +133,8 @@ body {
   width: 80%;
   height: calc(60vh);
   border: 1px solid #9A9A9A;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FDFBFB), to(#EBEDEE));
-  background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFF), to(#EBEDEE));
+  background: linear-gradient(180deg, #FFFF 0%, #EBEDEE 100%);
   background-size: cover;
   border-radius: 22px;
   display: -webkit-box;
@@ -189,7 +189,17 @@ body {
 }
 
 .gpa-cgpa-container .gpa-content .gpa-input .select-box select:hover {
+  -webkit-box-shadow: 0 0 10px #ff749281;
+          box-shadow: 0 0 10px #ff749281;
   border: 2px solid #ff7491;
+}
+
+.gpa-cgpa-container .gpa-content .gpa-input .select-box select option {
+  color: #1f1f1f;
+}
+
+.gpa-cgpa-container .gpa-content .gpa-input .select-box select option:hover {
+  background: #ff749244;
 }
 
 .gpa-cgpa-container .gpa-content .gpa-input .select-box:after {
@@ -217,14 +227,13 @@ body {
   height: 100%;
   text-align: left;
   word-wrap: break-word;
+  position: relative;
 }
 
-.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tr {
+.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table thead tr th {
+  top: 0;
   position: -webkit-sticky;
   position: sticky;
-}
-
-.gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tr th {
   margin: 0 6px;
   font-size: 25px;
 }
@@ -255,6 +264,8 @@ body {
 }
 
 .gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tbody tr td select:hover {
+  -webkit-box-shadow: 0 0 10px #ff749281;
+          box-shadow: 0 0 10px #ff749281;
   border: 2px solid #ff7491;
 }
 
@@ -308,6 +319,17 @@ body {
   -webkit-animation: fadeIn 0.5s;
           animation: fadeIn 0.5s;
   display: none;
+}
+
+.scrolled {
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  background: WHITE;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @media only screen and (max-width: 768px) {
