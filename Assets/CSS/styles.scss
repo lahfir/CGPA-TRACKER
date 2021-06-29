@@ -1,7 +1,7 @@
 $base-color: #f1f1f1;
 $primary-font-color: #1f1f1f;
 $secondary-font-color: white;
-$transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+$transition: all 0.3s ease-out;
 $toggle-bg: #bfbfbf;
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 
@@ -23,19 +23,57 @@ body {
     justify-content: center;
     align-items: center;
 
-    h1 {
-        font-family: 'Days One', sans-serif;
+    div {
+        margin-top: 10px;
+        padding: 10px 15px;
+        border-radius: 12px;
         width: 80%;
-        transition: $transition;
-        height: 100%;
         display: flex;
-        text-align: center;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        border-radius: 20px;
-        font-weight: bolder;
-        font-size: 40px;
-        color: $primary-font-color;
+
+        h1 {
+            font-family: 'Days One', sans-serif;
+            transition: $transition;
+            height: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            font-weight: bolder;
+            font-size: 40px;
+            color: $primary-font-color;
+        }
+
+        .nav-links {
+            all: unset;
+
+            ul {
+                li {
+                    cursor: pointer;
+                    list-style: none;
+                    font-size: large;
+                    padding: 10px 7px;
+                    border-radius: 10px;
+                    background: none;
+                    border-bottom: 2px solid #de3e5f;
+                }
+
+                li:hover {
+                    background: linear-gradient(97.38deg, #de3e5f -0.86%, #ff7491 101.03%);
+                    border-radius: 5px;
+                    color: white;
+                    box-shadow: 0 0 120px #ff749281;
+                    border: 2px solid #ff7491;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    div:hover {
+        background: #e1e1e1;
     }
 }
 
@@ -285,6 +323,7 @@ body {
         flex-wrap: wrap;
 
         div {
+            animation: zoomIn 0.5s;
             padding-right: 30px;
             padding-top: 30px;
 
