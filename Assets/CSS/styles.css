@@ -8,12 +8,11 @@
 }
 
 body {
-  padding: 15px;
   background: #f1f1f1;
 }
 
 #navbar {
-  height: 70px;
+  height: 80px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,7 +131,7 @@ body {
   -webkit-animation: zoomIn 0.7s;
           animation: zoomIn 0.7s;
   width: 80%;
-  height: auto;
+  height: calc(60vh);
   border: 1px solid #9A9A9A;
   background: -webkit-gradient(linear, left top, left bottom, from(#FDFBFB), to(#EBEDEE));
   background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
@@ -207,7 +206,7 @@ body {
 
 .gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table {
   width: 100%;
-  height: 500px;
+  height: 75%;
   margin-top: 15px;
   overflow-y: scroll;
 }
@@ -316,6 +315,9 @@ body {
   .toggle-div .toggle-right {
     width: 150px;
   }
+  .gpa-cgpa-container {
+    height: auto;
+  }
   .gpa-cgpa-container .gpa-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -334,6 +336,9 @@ body {
   }
   .gpa-cgpa-container .gpa-content .gpa-output h1 {
     font-size: 25px;
+  }
+  .gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table {
+    height: unset;
   }
   .gpa-cgpa-container .gpa-content .gpa-output .gpa-output-grade-input-table table tr th {
     font-size: 20px;

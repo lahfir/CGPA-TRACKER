@@ -13,12 +13,11 @@ $toggle-bg: #bfbfbf;
 }
 
 body {
-    padding: 15px;
     background: $base-color;
 }
 
 #navbar {
-    height: 70px;
+    height: 80px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -107,7 +106,7 @@ body {
     padding: 30px;
     animation: zoomIn 0.7s;
     width: 80%;
-    height: auto;
+    height: calc(60vh);
     border: 1px solid #9A9A9A;
     background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
     background-size: cover;
@@ -172,7 +171,7 @@ body {
 
             .gpa-output-grade-input-table {
                 width: 100%;
-                height: 500px;
+                height: 75%;
                 margin-top: 15px;
                 overflow-y: scroll;
 
@@ -285,6 +284,8 @@ body {
     }
 
     .gpa-cgpa-container {
+        height: auto;
+
         .gpa-content {
             flex-direction: column;
 
@@ -297,6 +298,7 @@ body {
             }
 
             .gpa-output {
+
                 padding: 10px 0 0 0;
 
                 h1 {
@@ -304,6 +306,7 @@ body {
                 }
 
                 .gpa-output-grade-input-table {
+                    height: unset;
 
                     table {
                         tr {
