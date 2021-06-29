@@ -274,31 +274,39 @@ body {
         }
     }
 
-    .cgpa-content{
+    .cgpa-content {
         animation: fadeIn 0.5s;
         display: none;
         padding-top: 10px;
     }
 
-    .cgpa-input{
+    .cgpa-input {
         display: flex;
         flex-wrap: wrap;
-        div{
+
+        div {
             padding-right: 30px;
             padding-top: 30px;
-            input{
+
+            input {
+                margin-top: 5px;
                 width: 100px;
-                height: 25px;
-                border-radius: 10px;
+                height: 30px;
+                border: 1px solid #9E9E9E;
+                border-radius: 6px;
                 padding-left: 10px;
                 font-size: 15px;
+                outline: none;
             }
+
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-            }       
-            input:hover{
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input:hover,
+            input:focus-within {
                 box-shadow: 0 0 10px #ff749281;
                 border: 2px solid #ff7491;
             }

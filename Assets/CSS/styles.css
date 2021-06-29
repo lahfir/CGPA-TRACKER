@@ -336,11 +336,14 @@ body {
 }
 
 .gpa-cgpa-container .cgpa-input div input {
+  margin-top: 5px;
   width: 100px;
-  height: 25px;
-  border-radius: 10px;
+  height: 30px;
+  border: 1px solid #9E9E9E;
+  border-radius: 6px;
   padding-left: 10px;
   font-size: 15px;
+  outline: none;
 }
 
 .gpa-cgpa-container .cgpa-input div input::-webkit-outer-spin-button,
@@ -349,7 +352,8 @@ body {
   margin: 0;
 }
 
-.gpa-cgpa-container .cgpa-input div input:hover {
+.gpa-cgpa-container .cgpa-input div input:hover,
+.gpa-cgpa-container .cgpa-input div input:focus-within {
   -webkit-box-shadow: 0 0 10px #ff749281;
           box-shadow: 0 0 10px #ff749281;
   border: 2px solid #ff7491;
