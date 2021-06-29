@@ -31,3 +31,9 @@ $("#dept-select").click(function () {
     $("#sem-select option:gt(7)").remove();
   }
 });
+
+$($(".gpa-output-grade-input-table")).scroll(function () {
+  var $nav = $("th");
+  console.log($nav.prop("scrollHeight"));
+  $nav.toggleClass("scrolled", $nav.prop("scrollHeight") > 0);
+});

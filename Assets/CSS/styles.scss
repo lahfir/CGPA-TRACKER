@@ -108,7 +108,7 @@ body {
     width: 80%;
     height: calc(60vh);
     border: 1px solid #9A9A9A;
-    background: linear-gradient(180deg, #FDFBFB 0%, #EBEDEE 100%);
+    background: linear-gradient(180deg, #FFFF 0%, #EBEDEE 100%);
     background-size: cover;
     border-radius: 22px;
     display: flex;
@@ -152,7 +152,16 @@ body {
                 }
 
                 select:hover {
+                    box-shadow: 0 0 10px #ff749281;
                     border: 2px solid #ff7491;
+                }
+
+                select option {
+                    color: #1f1f1f;
+                }
+
+                select option:hover {
+                    background: #ff749244;
                 }
             }
 
@@ -181,13 +190,16 @@ body {
                     height: 100%;
                     text-align: left;
                     word-wrap: break-word;
+                    position: relative;
 
-                    tr {
-                        position: sticky;
-
-                        th {
-                            margin: 0 6px;
-                            font-size: 25px;
+                    thead {
+                        tr {
+                            th {
+                                top: 0;
+                                position: sticky;
+                                margin: 0 6px;
+                                font-size: 25px;
+                            }
                         }
                     }
 
@@ -215,6 +227,7 @@ body {
                                 }
 
                                 select:hover {
+                                    box-shadow: 0 0 10px #ff749281;
                                     border: 2px solid #ff7491;
                                 }
                             }
@@ -294,6 +307,13 @@ body {
 
 }
 
+.scrolled {
+    transition: background-color 200ms linear;
+    background: WHITE;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
 @media only screen and (max-width: 1250px) {}
 
