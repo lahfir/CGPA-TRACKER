@@ -25,7 +25,7 @@ body {
           align-items: center;
 }
 
-#navbar div {
+#navbar .inner-wrapper {
   margin-top: 10px;
   padding: 10px 15px;
   border-radius: 12px;
@@ -41,7 +41,7 @@ body {
           align-items: center;
 }
 
-#navbar div h1 {
+#navbar .inner-wrapper h1 {
   font-family: 'Days One', sans-serif;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -62,11 +62,7 @@ body {
   color: #1f1f1f;
 }
 
-#navbar div .nav-links {
-  all: unset;
-}
-
-#navbar div .nav-links ul li {
+#navbar .inner-wrapper .nav-links ul li {
   cursor: pointer;
   list-style: none;
   font-size: large;
@@ -76,7 +72,12 @@ body {
   border-bottom: 2px solid #de3e5f;
 }
 
-#navbar div .nav-links ul li:hover {
+#navbar .inner-wrapper .nav-links ul li a {
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+#navbar .inner-wrapper .nav-links ul li:hover {
   background: linear-gradient(97.38deg, #de3e5f -0.86%, #ff7491 101.03%);
   border-radius: 5px;
   color: white;
@@ -84,6 +85,10 @@ body {
           box-shadow: 0 0 120px #ff749281;
   border: 2px solid #ff7491;
   font-weight: bold;
+}
+
+#navbar .inner-wrapper .nav-links ul li:hover a {
+  color: white;
 }
 
 #navbar div:hover {
@@ -462,8 +467,16 @@ body {
 }
 
 @media only screen and (max-width: 425px) {
-  #navbar h1 {
+  #navbar .inner-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #navbar .inner-wrapper h1 {
     font-size: 25px;
+  }
+  .nav-links {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

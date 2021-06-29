@@ -11,7 +11,6 @@ $("#cgpa-toggle").click(function () {
   $(".gpa-content").css("display", "none");
   $(".cgpa-content").css("display", "flex");
   $(".cgpa-content").css("flex-direction", "column");
-
 });
 
 $("#dept-select").click(function () {
