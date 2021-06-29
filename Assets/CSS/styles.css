@@ -308,6 +308,40 @@ body {
   -webkit-animation: fadeIn 0.5s;
           animation: fadeIn 0.5s;
   display: none;
+  padding-top: 10px;
+}
+
+.gpa-cgpa-container .cgpa-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gpa-cgpa-container .cgpa-input div {
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+.gpa-cgpa-container .cgpa-input div input {
+  width: 100px;
+  height: 25px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.gpa-cgpa-container .cgpa-input div input::-webkit-outer-spin-button,
+.gpa-cgpa-container .cgpa-input div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.gpa-cgpa-container .cgpa-input div input:hover {
+  -webkit-box-shadow: 0 0 10px #ff749281;
+          box-shadow: 0 0 10px #ff749281;
+  border: 2px solid #ff7491;
 }
 
 @media only screen and (max-width: 768px) {

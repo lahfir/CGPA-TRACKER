@@ -10,6 +10,8 @@ $("#cgpa-toggle").click(function () {
   $("#gpa-toggle").removeClass("selected-toggle");
   $(".gpa-content").css("display", "none");
   $(".cgpa-content").css("display", "flex");
+  $(".cgpa-content").css("flex-direction", "column");
+
 });
 
 $("#dept-select").click(function () {
