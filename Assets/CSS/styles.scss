@@ -13,6 +13,7 @@ $toggle-bg: #bfbfbf;
 }
 
 body {
+    scroll-behavior: smooth;
     background: $base-color;
 }
 
@@ -233,7 +234,7 @@ body {
                 table {
                     border-collapse: collapse;
                     width: 100%;
-                    height: 100%;
+                    height: auto;
                     text-align: left;
                     word-wrap: break-word;
                     position: relative;
@@ -276,6 +277,29 @@ body {
                                     box-shadow: 0 0 10px #ff749281;
                                     border: 2px solid #ff7491;
                                 }
+
+                                input {
+                                    border: 1px solid black;
+                                    font-size: 16px;
+                                    padding: 5px;
+                                    width: 50%;
+                                    border-radius: 6px;
+                                    font-weight: 400;
+                                    outline: none;
+                                }
+
+                                input::-webkit-outer-spin-button,
+                                input::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+
+                                input:hover,
+                                input:focus-within {
+                                    box-shadow: 0 0 10px #ff749281;
+                                    border: 2px solid #ff7491;
+                                }
+
                             }
                         }
 
@@ -323,39 +347,113 @@ body {
     .cgpa-content {
         animation: fadeIn 0.5s;
         display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         padding-top: 10px;
     }
 
-    .cgpa-input {
-        display: flex;
-        flex-wrap: wrap;
+    div {
+        p {
+            font-family: 'Days One', sans-serif;
+            text-align: center;
+            font-size: 22px;
+            font-weight: normal;
 
-        div {
-            animation: zoomIn 0.5s;
-            padding-right: 30px;
-            padding-top: 30px;
-
-            input {
-                margin-top: 5px;
-                width: 100px;
-                height: 30px;
-                border: 1px solid #9E9E9E;
-                border-radius: 6px;
-                padding-left: 10px;
-                font-size: 15px;
-                outline: none;
+            span {
+                font-size: 18px;
+                color: #939393;
             }
+        }
 
-            input::-webkit-outer-spin-button,
-            input::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
+        .cgpa-input {
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+
+                div {
+                    animation: zoomIn 0.5s;
+                    padding-right: 30px;
+                    padding-top: 30px;
+
+                    input {
+                        margin-top: 5px;
+                        width: 100px;
+                        height: 30px;
+                        border: 1px solid #9E9E9E;
+                        border-radius: 6px;
+                        padding-left: 10px;
+                        font-size: 15px;
+                        outline: none;
+                    }
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    input:hover,
+                    input:focus-within {
+                        box-shadow: 0 0 10px #ff749281;
+                        border: 2px solid #ff7491;
+                    }
+                }
+
+                button {
+                    width: 120px;
+                    height: 40px;
+                    background: #ff7491;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    border-radius: 8px;
+                    margin-right: 30px;
+                    margin-top: 30px;
+                    cursor: pointer;
+                }
+
+                button:hover,
+                button:focus-within {
+                    font-weight: bold;
+                    font-size: large;
+                    box-shadow: 0 0 10px #ff749281;
+                    border: 2px solid #ff7491;
+                }
             }
+        }
+    }
 
-            input:hover,
-            input:focus-within {
-                box-shadow: 0 0 10px #ff749281;
-                border: 2px solid #ff7491;
+    .cgpa-output {
+        display: none;
+        animation: bounceIn 1.5s;
+        width: 100%;
+        margin: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            text-align: center;
+            font-size: 22px;
+
+            #upto-span {
+                font-weight: bold;
+            }
+        }
+
+        #cgpa-display {
+            margin-top: 10px;
+            padding: 20px 15px;
+            color: white;
+            background: linear-gradient(180deg, #DE3E5F 0%, #FF7491 100%);
+            box-shadow: 0px 16px 31px 3px rgba(0, 0, 0, 0.15);
+            border-radius: 16.4316px;
+
+            span {
+                font-size: 23px;
+                font-weight: normal;
             }
         }
     }
@@ -411,9 +509,11 @@ body {
                     height: unset;
 
                     table {
-                        tr {
-                            th {
-                                font-size: 20px;
+                        thead {
+                            tr {
+                                th {
+                                    font-size: 20px;
+                                }
                             }
                         }
 
@@ -427,6 +527,10 @@ body {
                                         padding: 0;
 
                                     }
+                                }
+
+                                td:nth-child(2) {
+                                    text-align: center;
                                 }
                             }
                         }
