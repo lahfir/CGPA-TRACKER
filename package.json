@@ -1,0 +1,26 @@
+{
+  "name": "cgpa-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fetch.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.0",
+    "nodemon": "^2.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lahfir/CGPA-TRACKER.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lahfir/CGPA-TRACKER/issues"
+  },
+  "homepage": "https://github.com/lahfir/CGPA-TRACKER#readme"
+}
