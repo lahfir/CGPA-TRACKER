@@ -2,7 +2,7 @@
   "name": "cgpa-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "fetch.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.13.0",
