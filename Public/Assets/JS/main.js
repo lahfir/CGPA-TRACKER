@@ -69,3 +69,18 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
   $("#cgpa-display").text(parseFloat(temp / total).toFixed(2));
   window.scrollTo(0, document.body.scrollHeight);
 });
+
+
+async function getSelectValue()
+{
+  var Val= document.getElementById("dept-select").value;
+  const result = await fetch('http://localhost:3000/api/selectDept',{
+    method: 'POST',
+    headers: {
+        'Content-Type' : 'application/json'
+    },
+    body: JSON.stringify({
+      Val
+    })
+  }).then((res) => res.json())
+}

@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
-
-const Sample = new mongoose.Schema(
+var DeptName = 'EEE'
+const Schema = new mongoose.Schema(
     {
         Subject: {type: String},
-        Credit : {type: String},
-        Semester: {type: String}
+        Credit: {type: Number},
+        Semester: {type: Number}
     },
-    {collection: 'Sample' }
+    {collection: DeptName }
 )
 
-var model = mongoose.model('Sample', Sample, 'Sample');
+var model = mongoose.model(DeptName, Schema, DeptName);
 module.exports = model
