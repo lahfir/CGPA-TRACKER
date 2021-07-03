@@ -15,8 +15,8 @@ $("#cgpa-toggle").click(function () {
 
 $("#dept-select").click(function () {
   var newOptions = {
-    9: "s-9",
-    10: "s-10",
+    9: "9",
+    10: "10",
   };
 
   if ($("#dept-select").val() >= 17) {
@@ -75,6 +75,8 @@ async function getSelectValue() {
     .text()
     .replace(/\s+/g, " ")
     .trim();
+  var Val = $("");
+
   const result = await fetch("http://localhost:3000/api/selectDept", {
     method: "POST",
     headers: {

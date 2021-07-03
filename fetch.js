@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 var DeptName = "EEE";
+console.log(DeptName);
 const Schema = new mongoose.Schema(
   {
     Subject: { type: String },
