@@ -70,10 +70,20 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
   window.scrollTo(0, document.body.scrollHeight);
 });
 
+<<<<<<< HEAD
 async function getSelectValue() {
   $("#dept-select option:selected").text().trim();
   const result = await fetch("http://localhost:3000/api/selectDept", {
     method: "POST",
+=======
+
+async function getSelectValue()
+{
+  // var Val= document.getElementById("dept-select").value.text;
+  var Val= $("#dept-select option:selected").text().replace(/\s+/g,' ').trim();
+  const result = await fetch('http://localhost:3000/api/selectDept',{
+    method: 'POST',
+>>>>>>> 59a21ffeb2d59a0241fffe190ad75c8718a45b43
     headers: {
       "Content-Type": "application/json",
     },
