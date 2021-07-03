@@ -73,7 +73,8 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
 
 async function getSelectValue()
 {
-  var Val= document.getElementById("dept-select").value;
+  // var Val= document.getElementById("dept-select").value.text;
+  var Val= $("#dept-select option:selected").text().replace(/\s+/g,' ').trim();
   const result = await fetch('http://localhost:3000/api/selectDept',{
     method: 'POST',
     headers: {
