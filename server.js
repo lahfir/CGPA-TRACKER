@@ -36,6 +36,6 @@ async function findOne() {
 findOne();
 
 app.post("/api/selectDept", async (req, res) => {
-  var Val = req.body;
+  var Val = req.body.Val;
   console.log(Val);
 });
