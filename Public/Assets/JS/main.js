@@ -1,3 +1,5 @@
+const formData = new FormData();
+
 $("#gpa-toggle").click(function () {
   $("#gpa-toggle").addClass("selected-toggle");
   $("#cgpa-toggle").removeClass("selected-toggle");
@@ -75,7 +77,6 @@ async function getSelectValue() {
     .text()
     .replace(/\s+/g, " ")
     .trim();
-  var Val = $("");
 
   const result = await fetch("http://localhost:3000/api/selectDept", {
     method: "POST",
@@ -84,6 +85,22 @@ async function getSelectValue() {
     },
     body: JSON.stringify({
       Val,
+    }),
+  }).then((res) => res.json());
+}
+
+async function getSemValue()
+{
+  var Sem = document.getElementById("sem-select").value;
+  formData.append('sem',Sem);
+  console.log(Sem)
+  const result = await fetch("http://localhost:3000/api/selectSem",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      Sem
     }),
   }).then((res) => res.json());
 }
