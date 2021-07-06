@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const sample = require("./fetch");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
-app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("Public"));
 var Sem = 5;
@@ -35,5 +35,6 @@ async function findOne(DeptName) {
 
 app.post("/api/selectDept", async (req, res) => {
   var Val = req.body.Val;
-  findOne(Val);
+  var Sem = req.body.Sem;
+  console.log(Val, Sem);
 });

@@ -48,7 +48,6 @@ body {
         }
 
         .nav-links {
-
             ul {
                 li {
                     a {
@@ -179,43 +178,66 @@ body {
             font-size: 22px;
             width: 50%;
 
-            .select-box {
-                min-height: 190px;
-                overflow: auto;
-                position: absolute;
-                display: contents;
+            form {
+                .select-box {
+                    min-height: 190px;
+                    overflow: auto;
+                    position: absolute;
+                    display: contents;
 
-                select {
-                    cursor: pointer;
-                    height: 42px;
-                    border: 1px solid black;
-                    margin: 7px 0;
-                    padding: 10px 15px;
-                    line-height: 22px;
-                    font-size: 16px;
-                    width: 100%;
-                    border-radius: 8px;
-                    font-weight: 400;
+                    select {
+                        cursor: pointer;
+                        height: 42px;
+                        border: 1px solid black;
+                        margin: 7px 0;
+                        padding: 10px 15px;
+                        line-height: 22px;
+                        font-size: 16px;
+                        width: 100%;
+                        border-radius: 8px;
+                        font-weight: 400;
+                    }
+
+                    select:hover {
+                        box-shadow: 0 0 10px #ff749281;
+                        border: 2px solid #ff7491;
+                    }
+
+                    select option {
+                        color: #1f1f1f;
+                    }
+
+                    select option:hover {
+                        background: #ff749244;
+                    }
                 }
 
-                select:hover {
+
+                .select-box:after {
+                    content: "";
+                    position: absolute;
+                }
+
+                #i-submit-btn {
+                    width: 120px;
+                    height: 40px;
+                    background: #ff7491;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    border-radius: 8px;
+                    margin-right: 30px;
+                    margin-top: 15px;
+                    cursor: pointer;
+                }
+
+                #i-submit-btn:hover,
+                #i-submit-btn:focus {
+                    font-weight: bolder;
+                    font-size: large;
                     box-shadow: 0 0 10px #ff749281;
                     border: 2px solid #ff7491;
                 }
-
-                select option {
-                    color: #1f1f1f;
-                }
-
-                select option:hover {
-                    background: #ff749244;
-                }
-            }
-
-
-            .select-box:after {
-                content: "";
-                position: absolute;
             }
         }
 

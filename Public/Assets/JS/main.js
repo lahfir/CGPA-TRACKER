@@ -70,20 +70,23 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
   window.scrollTo(0, document.body.scrollHeight);
 });
 
-async function getSelectValue() {
+document.getElementById("form-1").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(document.getElementById("form-1"));
   var Val = $("#dept-select option:selected")
     .text()
     .replace(/\s+/g, " ")
     .trim();
-  var Val = $("");
+  var Sem = parseInt($("#sem-select option:selected").text());
 
-  const result = await fetch("http://localhost:3000/api/selectDept", {
+  const result = fetch("http://localhost:3000/api/selectDept", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       Val,
+      Sem,
     }),
   }).then((res) => res.json());
-}
+});
