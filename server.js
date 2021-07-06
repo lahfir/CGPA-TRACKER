@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("Public"));
-var Sem = 5;
 require("dotenv").config();
 
 async function ConnectDb() {
@@ -35,6 +34,16 @@ async function findOne(DeptName) {
 
 app.post("/api/selectDept", async (req, res) => {
   var Val = req.body.Val;
+<<<<<<< HEAD
   var Sem = req.body.Sem;
   console.log(Val, Sem);
+=======
+  findOne(Val)
+>>>>>>> 816cd2cb9f674c57b4919f6258a8733355ab404e
 });
+
+app.post("/api/selectSem", async (req, res)=>{
+  var Sem = parseInt(req.body.Sem);
+  console.log(Sem);
+})
+

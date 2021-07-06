@@ -1,3 +1,5 @@
+const formData = new FormData();
+
 $("#gpa-toggle").click(function () {
   $("#gpa-toggle").addClass("selected-toggle");
   $("#cgpa-toggle").removeClass("selected-toggle");
@@ -77,7 +79,10 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
     .text()
     .replace(/\s+/g, " ")
     .trim();
+<<<<<<< HEAD
   var Sem = parseInt($("#sem-select option:selected").text());
+=======
+>>>>>>> 816cd2cb9f674c57b4919f6258a8733355ab404e
 
   const result = fetch("http://localhost:3000/api/selectDept", {
     method: "POST",
@@ -89,4 +94,24 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
       Sem,
     }),
   }).then((res) => res.json());
+<<<<<<< HEAD
 });
+=======
+}
+
+async function getSemValue()
+{
+  var Sem = document.getElementById("sem-select").value;
+  formData.append('sem',Sem);
+  console.log(Sem)
+  const result = await fetch("http://localhost:3000/api/selectSem",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      Sem
+    }),
+  }).then((res) => res.json());
+}
+>>>>>>> 816cd2cb9f674c57b4919f6258a8733355ab404e
