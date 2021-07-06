@@ -34,16 +34,7 @@ async function findOne(DeptName) {
 
 app.post("/api/selectDept", async (req, res) => {
   var Val = req.body.Val;
-<<<<<<< HEAD
   var Sem = req.body.Sem;
   console.log(Val, Sem);
-=======
-  findOne(Val)
->>>>>>> 816cd2cb9f674c57b4919f6258a8733355ab404e
+  findOne(Val);
 });
-
-app.post("/api/selectSem", async (req, res)=>{
-  var Sem = parseInt(req.body.Sem);
-  console.log(Sem);
-})
-
