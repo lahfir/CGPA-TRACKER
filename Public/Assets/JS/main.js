@@ -90,20 +90,14 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
       Val,
       Sem,
     }),
-  }).then((res) => res.json());
+  })
+  result.then((res) => {
+    // res.json();
+    console.log(res.json())
+  })
+  .catch(err=>{
+    console.log(err)
+  })
 });
 
-async function getSemValue() {
-  var Sem = document.getElementById("sem-select").value;
-  formData.append("sem", Sem);
-  console.log(Sem);
-  const result = await fetch("http://localhost:3000/api/selectSem", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      Sem,
-    }),
-  }).then((res) => res.json());
-}
+

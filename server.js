@@ -3,13 +3,14 @@ const path = require("path");
 const app = express();
 const mongoose = require("mongoose");
 const sample = require("./fetch");
+const model = require('./model');
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("Public"));
 require("dotenv").config();
-
+var Semester;
 async function ConnectDb() {
   const db = await mongoose.connect(process.env.CONNECT, {
     useNewUrlParser: true,
@@ -24,17 +25,19 @@ app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
 
-async function findOne(DeptName) {
-  sample.DeptName = DeptName;
-  await sample.find({ Semester: Sem }, function (err, docs) {
+async function findOne(DeptName,Sem,res) {
+  // sample.DeptName = DeptName;
+  // console.log(sample)
+  let obj = new sample(DeptName);
+  // console.log(obj)
+  await obj.model.find({ Semester: Sem }, function (err, docs) {
     if (err) console.log(err);
-    else console.log(docs);
+    else res.send({result:docs});
   });
 }
 
 app.post("/api/selectDept", async (req, res) => {
   var Val = req.body.Val;
   var Sem = req.body.Sem;
-  console.log(Val, Sem);
-  findOne(Val);
+  findOne(Val,Sem,res);
 });
