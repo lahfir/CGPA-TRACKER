@@ -90,14 +90,176 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
       Val,
       Sem,
     }),
-  })
-  result.then((res) => {
-    // res.json();
-    console.log(res.json())
-  })
-  .catch(err=>{
-    console.log(err)
-  })
+  });
+  result
+    .then((res) => res.json())
+    .then((subjects) => {
+      let array = [];
+      Object.entries(subjects).forEach((sub) => {
+        array = sub[1];
+      });
+      if (array.length <= 0) {
+        $("#table > tbody").html("");
+        $("#empty").text("No Data").show(300);
+      } else {
+        $("#table > tbody").html("");
+        $("#empty").hide(300);
+        for (let i = 0; i < array.length; i++) {
+          let tr = document.createElement("TR");
+          let tdS = document.createElement("TD");
+          let tdC = document.createElement("TD");
+          let tdG = document.createElement("TD");
+          let select = document.createElement("SELECT");
+          let option = document.createElement("OPTION");
+          option.setAttribute("value", "10");
+          option.append(document.createTextNode("10 O"));
+          select.appendChild(option);
+          let option1 = document.createElement("OPTION");
+          option1.setAttribute("value", "9");
+          option1.append(document.createTextNode("9 A+"));
+          select.appendChild(option1);
+          let option2 = document.createElement("OPTION");
+          option2.setAttribute("value", "8");
+          option2.append(document.createTextNode("8 A"));
+          select.appendChild(option2);
+          let option3 = document.createElement("OPTION");
+          option3.setAttribute("value", "7");
+          option3.append(document.createTextNode("7 B+"));
+          select.appendChild(option3);
+
+          select.setAttribute("name", "grade-select-dd");
+          select.id = "grade-select-dd";
+
+          tdS.appendChild(document.createTextNode(array[i].Subject));
+          tdC.appendChild(document.createTextNode(array[i].Credit));
+          tdG.appendChild(select);
+          tr.appendChild(tdS);
+          tr.appendChild(tdC);
+          tr.appendChild(tdG);
+          document.getElementById("tbody").appendChild(tr);
+
+          if (i == array.length - 1) {
+            let tr = document.createElement("TR");
+            let tdS = document.createElement("TD");
+            let tdC = document.createElement("TD");
+            let tdG = document.createElement("TD");
+            let select = document.createElement("SELECT");
+            let option = document.createElement("OPTION");
+            option.setAttribute("value", "10");
+            option.append(document.createTextNode("10 O"));
+            select.appendChild(option);
+            let option1 = document.createElement("OPTION");
+            option1.setAttribute("value", "9");
+            option1.append(document.createTextNode("9 A+"));
+            select.appendChild(option1);
+            let option2 = document.createElement("OPTION");
+            option2.setAttribute("value", "8");
+            option2.append(document.createTextNode("8 A"));
+            select.appendChild(option2);
+            let option3 = document.createElement("OPTION");
+            option3.setAttribute("value", "7");
+            option3.append(document.createTextNode("7 B+"));
+            select.appendChild(option3);
+
+            select.setAttribute("name", "grade-select-dd");
+            select.id = "grade-select-dd";
+
+            tdS.appendChild(document.createTextNode("Elective 1 (Optional)"));
+            let inputC = document.createElement("INPUT");
+            inputC.id = "el1";
+            inputC.setAttribute("type", "number");
+            tdC.appendChild(inputC);
+            tdG.appendChild(select);
+            tr.appendChild(tdS);
+            tr.appendChild(tdC);
+            tr.appendChild(tdG);
+            document.getElementById("tbody").appendChild(tr);
+
+            select = document.createElement("SELECT");
+            option = document.createElement("OPTION");
+            option.setAttribute("value", "10");
+            option.append(document.createTextNode("10 O"));
+            select.appendChild(option);
+            option1 = document.createElement("OPTION");
+            option1.setAttribute("value", "9");
+            option1.append(document.createTextNode("9 A+"));
+            select.appendChild(option1);
+            option2 = document.createElement("OPTION");
+            option2.setAttribute("value", "8");
+            option2.append(document.createTextNode("8 A"));
+            select.appendChild(option2);
+            option3 = document.createElement("OPTION");
+            option3.setAttribute("value", "7");
+            option3.append(document.createTextNode("7 B+"));
+            select.appendChild(option3);
+
+            select.setAttribute("name", "grade-select-dd");
+            select.id = "grade-select-dd";
+
+            tr = document.createElement("TR");
+            tdS = document.createElement("TD");
+            tdC = document.createElement("TD");
+            tdG = document.createElement("TD");
+            tdS.appendChild(document.createTextNode("Elective 2 (Optional)"));
+            inputC = document.createElement("INPUT");
+            inputC.id = "el2";
+            inputC.setAttribute("type", "number");
+            tdC.appendChild(inputC);
+            tdG.appendChild(select);
+            tr.appendChild(tdS);
+            tr.appendChild(tdC);
+            tr.appendChild(tdG);
+            document.getElementById("tbody").appendChild(tr);
+
+            select = document.createElement("SELECT");
+            option = document.createElement("OPTION");
+            option.setAttribute("value", "10");
+            option.append(document.createTextNode("10 O"));
+            select.appendChild(option);
+            option1 = document.createElement("OPTION");
+            option1.setAttribute("value", "9");
+            option1.append(document.createTextNode("9 A+"));
+            select.appendChild(option1);
+            option2 = document.createElement("OPTION");
+            option2.setAttribute("value", "8");
+            option2.append(document.createTextNode("8 A"));
+            select.appendChild(option2);
+            option3 = document.createElement("OPTION");
+            option3.setAttribute("value", "7");
+            option3.append(document.createTextNode("7 B+"));
+            select.appendChild(option3);
+
+            select.setAttribute("name", "grade-select-dd");
+            select.id = "grade-select-dd";
+
+            tr = document.createElement("TR");
+            tdS = document.createElement("TD");
+            tdC = document.createElement("TD");
+            tdG = document.createElement("TD");
+            tdS.appendChild(document.createTextNode("Elective 3 (Optional)"));
+            inputC = document.createElement("INPUT");
+            inputC.id = "el3";
+            inputC.setAttribute("type", "number");
+            tdC.appendChild(inputC);
+            tdG.appendChild(select);
+            tr.appendChild(tdS);
+            tr.appendChild(tdC);
+            tr.appendChild(tdG);
+            document.getElementById("tbody").appendChild(tr);
+          }
+        }
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
+$("#calculate-btn").on("click", function () {
+  $(this).css("display", "none");
+  $("#table > tbody > tr").each(function (index, value) {
+    console.log($("td:eq(2)", this));
+  });
 
+  $(".total").css("display", "flex").delay(200).show(200);
+});

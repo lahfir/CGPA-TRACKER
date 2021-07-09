@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const mongoose = require("mongoose");
 const sample = require("./fetch");
-const model = require('./model');
+const model = require("./model");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
@@ -25,19 +25,21 @@ app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
 
-async function findOne(DeptName,Sem,res) {
+async function findOne(DeptName, Sem, res) {
   // sample.DeptName = DeptName;
   // console.log(sample)
   let obj = new sample(DeptName);
   // console.log(obj)
   await obj.model.find({ Semester: Sem }, function (err, docs) {
     if (err) console.log(err);
-    else res.send({result:docs});
+    else {
+      res.send({ subjects: docs });
+    }
   });
 }
 
 app.post("/api/selectDept", async (req, res) => {
   var Val = req.body.Val;
   var Sem = req.body.Sem;
-  findOne(Val,Sem,res);
+  findOne(Val, Sem, res);
 });

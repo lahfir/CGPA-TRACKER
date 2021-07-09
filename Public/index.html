@@ -173,8 +173,8 @@
                   <th width="100px">Grade</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
+              <tbody id="tbody">
+                <!-- <tr>
                   <td>Discrete mathematics and Automata theory</td>
                   <td>3</td>
                   <td>
@@ -186,8 +186,8 @@
                       <option value="6">6 B</option>
                     </select>
                   </td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                   <td>Elective 1 (Optional)</td>
                   <td><input id="el1" type="number" /></td>
                   <td>
@@ -225,11 +225,15 @@
                       <option value="6">6 B</option>
                     </select>
                   </td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
+            <p id="empty">Select a department and semester to calculate GPA</p>
           </div>
           <div class="grade-display-container">
+            <div class="calculate">
+              <button id="calculate-btn">Calculate</button>
+            </div>
             <div class="total">
               <h1>Total</h1>
               <h1 id="total-gpa">8.5<span>GPA</span></h1>
