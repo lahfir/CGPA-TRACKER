@@ -53,16 +53,16 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
   var s8 = parseFloat(formData.get("s-8"));
   var s9 = parseFloat(formData.get("s-9"));
   var s10 = parseFloat(formData.get("s-10"));
-  if(isNaN(s1)) s1=0;
-  if(isNaN(s2)) s2=0;
-  if(isNaN(s3)) s3=0;
-  if(isNaN(s4)) s4=0;
-  if(isNaN(s5)) s5=0;
-  if(isNaN(s6)) s6=0;
-  if(isNaN(s7)) s7=0;
-  if(isNaN(s8)) s8=0;
-  if(isNaN(s9)) s9=0;
-  if(isNaN(s10)) s10=0;
+  if (isNaN(s1)) s1 = 0;
+  if (isNaN(s2)) s2 = 0;
+  if (isNaN(s3)) s3 = 0;
+  if (isNaN(s4)) s4 = 0;
+  if (isNaN(s5)) s5 = 0;
+  if (isNaN(s6)) s6 = 0;
+  if (isNaN(s7)) s7 = 0;
+  if (isNaN(s8)) s8 = 0;
+  if (isNaN(s9)) s9 = 0;
+  if (isNaN(s10)) s10 = 0;
   var temp = 0;
   var total = 0;
   temp = s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10;
@@ -74,9 +74,9 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
   if (s6 != 0) total += 1;
   if (s7 != 0) total += 1;
   if (s8 != 0) total += 1;
-  if (s9 !=0) total += 1;
+  if (s9 != 0) total += 1;
   if (s10 != 0) total += 1;
-  console.log(temp/total);
+  console.log(temp / total);
   $("#cgpa-display").text(parseFloat(temp / total).toFixed(2));
   window.scrollTo(0, document.body.scrollHeight);
 });
@@ -270,7 +270,7 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
 });
 
 $("#calculate-btn").on("click", function () {
-  $(".calculate").css("display", "none");
+  // $(".calculate").css("display", "none");
 
   var total = 0;
   var totalCredit = 0;
@@ -279,8 +279,8 @@ $("#calculate-btn").on("click", function () {
   for (var i = 0; i < grades.length - 3; i++) {
     // console.log(credit[i].textContent);
     // console.log(grades[i].value);
-    total = total + credit[i].textContent * grades[i].value;
-    totalCredit = totalCredit + credit[i].textContent;
+    total = total + parseInt(credit[i].textContent) * grades[i].value;
+    totalCredit = totalCredit + parseInt(credit[i].textContent);
   }
   let el1 = document.getElementById("el1").innerHTML,
     el2 = document.getElementById("el2").innerHTML,
