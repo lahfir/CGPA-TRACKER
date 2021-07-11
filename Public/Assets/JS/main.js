@@ -35,7 +35,6 @@ $("#dept-select").click(function () {
 
 $($(".gpa-output-grade-input-table")).scroll(function () {
   var $nav = $("th");
-  console.log($nav.prop("scrollHeight"));
   $nav.toggleClass("scrolled", $nav.prop("scrollHeight") > 0);
 });
 
@@ -74,6 +73,7 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
 
 document.getElementById("form-1").addEventListener("submit", (event) => {
   event.preventDefault();
+  $("#empty").text("Fetching Data...").show(300);
   const formData = new FormData(document.getElementById("form-1"));
   var Val = $("#dept-select option:selected")
     .text()
@@ -104,12 +104,15 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
       } else {
         $("#table > tbody").html("");
         $("#empty").hide(300);
+        $(".total").css("display", "none");
         for (let i = 0; i < array.length; i++) {
           let tr = document.createElement("TR");
           let tdS = document.createElement("TD");
           let tdC = document.createElement("TD");
           let tdG = document.createElement("TD");
           let select = document.createElement("SELECT");
+          select.className = "grade-select";
+          tdC.className = "credit-field";
           let option = document.createElement("OPTION");
           option.setAttribute("value", "10");
           option.append(document.createTextNode("10 O"));
@@ -248,6 +251,7 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
             document.getElementById("tbody").appendChild(tr);
           }
         }
+        $(".calculate").css("display", "flex").show(200);
       }
     })
     .catch((err) => {
@@ -256,10 +260,35 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
 });
 
 $("#calculate-btn").on("click", function () {
-  $(this).css("display", "none");
-  $("#table > tbody > tr").each(function (index, value) {
-    console.log($("td:eq(2)", this));
-  });
+  $(".calculate").css("display", "none");
 
+  var total = 0;
+  var totalCredit = 0;
+  var grades = document.getElementsByClassName("grade-select");
+  var credit = document.getElementsByClassName("credit-field");
+  for (var i = 0; i < grades.length - 3; i++) {
+    // console.log(credit[i].textContent);
+    // console.log(grades[i].value);
+    total = total + credit[i].textContent * grades[i].value;
+    totalCredit = totalCredit + credit[i].textContent;
+  }
+  let el1 = document.getElementById("el1").innerHTML,
+    el2 = document.getElementById("el2").innerHTML,
+    el3 = document.getElementById("el3").innerHTML;
+
+  if (el1) {
+    total = total + parseInt(el1.innerHtml) * grades[grades.length - 3].value;
+    totalCredit = totalCredi + parseInt(el1.innerHtml);
+  }
+  if (el2) {
+    total = total + parseInt(el2.innerHtml) * grades[grades.length - 2].value;
+    totalCredit = totalCredi + parseInt(el2.innerHtml);
+  }
+  if (el3) {
+    total = total + parseInt(el3.innerHtml) * grades[grades.length - 1].value;
+    totalCredit = totalCredi + parseInt(el3.innerHtml);
+  }
+
+  $("#total-gpa").text(parseFloat(total / totalCredit).toFixed(2));
   $(".total").css("display", "flex").delay(200).show(200);
 });
