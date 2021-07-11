@@ -67,7 +67,6 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
   var temp = 0;
   var total = 0;
   temp = s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10;
-<<<<<<< HEAD
   if (s1 != 0) total += 1;
   if (s2 != 0) total += 1;
   if (s3 != 0) total += 1;
@@ -79,19 +78,6 @@ document.getElementById("cgpa").addEventListener("submit", (event) => {
   if (s9 !=0) total += 1;
   if (s10 != 0) total += 1;
   console.log(temp/total);
-=======
-  if (s1 != 0 || s1 != null || s1 >= 6) total += 1;
-  if (s2 != 0 || s2 != null || s2 >= 6) total += 1;
-  if (s3 != 0 || s3 != null || s3 >= 6) total += 1;
-  if (s4 != 0 || s4 != null || s4 >= 6) total += 1;
-  if (s5 != 0 || s5 != null || s5 >= 6) total += 1;
-  if (s6 != 0 || s6 != null || s6 >= 6) total += 1;
-  if (s7 != 0 || s7 != null || s7 >= 6) total += 1;
-  if (s8 != 0 || s8 != null || s8 >= 6) total += 1;
-  if (s9 != 0 || s9 != null || s9 >= 6) total += 1;
-  if (s10 != 0 || s10 != null || s10 >= 6) total += 1;
-
->>>>>>> 05650f92307af272b85b65a75aff714e9d2d96e0
   $("#cgpa-display").text(parseFloat(temp / total).toFixed(2));
   window.scrollTo(0, document.body.scrollHeight);
 });
