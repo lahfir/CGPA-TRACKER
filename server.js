@@ -13,6 +13,7 @@ require("dotenv").config();
 var Semester;
 async function ConnectDb() {
   const db = await mongoose.connect(process.env.CONNECT, {
+    keepAlive: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
