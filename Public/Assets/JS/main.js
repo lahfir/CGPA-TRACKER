@@ -142,6 +142,7 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
 
           select.setAttribute("name", "grade-select-dd");
           select.id = "grade-select-dd";
+          select.className = "grade-select";
 
           tdS.appendChild(document.createTextNode(array[i].Subject));
           tdC.appendChild(document.createTextNode(array[i].Credit));
@@ -176,6 +177,7 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
 
             select.setAttribute("name", "grade-select-dd");
             select.id = "grade-select-dd";
+            select.className = "grade-select";
 
             tdS.appendChild(document.createTextNode("Elective 1 (Optional)"));
             let inputC = document.createElement("INPUT");
@@ -208,6 +210,7 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
 
             select.setAttribute("name", "grade-select-dd");
             select.id = "grade-select-dd";
+            select.className = "grade-select";
 
             tr = document.createElement("TR");
             tdS = document.createElement("TD");
@@ -244,6 +247,7 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
 
             select.setAttribute("name", "grade-select-dd");
             select.id = "grade-select-dd";
+            select.className = "grade-select";
 
             tr = document.createElement("TR");
             tdS = document.createElement("TD");
@@ -276,27 +280,30 @@ $("#calculate-btn").on("click", function () {
   var totalCredit = 0;
   var grades = document.getElementsByClassName("grade-select");
   var credit = document.getElementsByClassName("credit-field");
+
+  console.log(grades);
+
   for (var i = 0; i < grades.length - 3; i++) {
     // console.log(credit[i].textContent);
     // console.log(grades[i].value);
     total = total + parseInt(credit[i].textContent) * grades[i].value;
     totalCredit = totalCredit + parseInt(credit[i].textContent);
   }
-  let el1 = document.getElementById("el1").innerHTML,
-    el2 = document.getElementById("el2").innerHTML,
-    el3 = document.getElementById("el3").innerHTML;
+  let el1 = document.getElementById("el1").value,
+    el2 = document.getElementById("el2").value,
+    el3 = document.getElementById("el3").value;
 
   if (el1) {
-    total = total + parseInt(el1.innerHtml) * grades[grades.length - 3].value;
-    totalCredit = totalCredi + parseInt(el1.innerHtml);
+    total = total + parseInt(el1) * grades[grades.length - 3].value;
+    totalCredit = totalCredit + parseInt(el1);
   }
   if (el2) {
-    total = total + parseInt(el2.innerHtml) * grades[grades.length - 2].value;
-    totalCredit = totalCredi + parseInt(el2.innerHtml);
+    total = total + parseInt(el2) * grades[grades.length - 2].value;
+    totalCredit = totalCredit + parseInt(el2);
   }
   if (el3) {
-    total = total + parseInt(el3.innerHtml) * grades[grades.length - 1].value;
-    totalCredit = totalCredi + parseInt(el3.innerHtml);
+    total = total + parseInt(el3) * grades[grades.length - 1].value;
+    totalCredit = totalCredit + parseInt(el3);
   }
 
   $("#total-gpa").text(parseFloat(total / totalCredit).toFixed(2));
