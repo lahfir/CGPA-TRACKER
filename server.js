@@ -5,12 +5,12 @@ const mongoose = require("mongoose");
 const sample = require("./fetch");
 const model = require("./model");
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("Public"));
 require("dotenv").config();
 var Semester;
+const PORT = process.env.PORT || 3000;
 async function ConnectDb() {
   const db = await mongoose.connect(process.env.CONNECT, {
     keepAlive: true,

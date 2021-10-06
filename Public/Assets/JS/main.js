@@ -91,7 +91,7 @@ document.getElementById("form-1").addEventListener("submit", (event) => {
     .trim();
   var Sem = parseInt($("#sem-select option:selected").text());
 
-  const result = fetch("http://localhost:3000/api/selectDept", {
+  const result = fetch("/api/selectDept", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
